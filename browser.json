@@ -2,6 +2,7 @@
   "zlib": "browserify-zlib",
   "console": "console-browserify",
   "constants": "constants-browserify",
+  "pbkdf2": "react-native-pbkdf2",
   "crypto": "react-native-crypto",
   "dns": "dns.js",
   "net": "react-native-tcp",

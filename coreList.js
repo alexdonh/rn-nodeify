@@ -5,6 +5,7 @@ module.exports = [
   "inherits",
   "console",
   "constants",
+  "pbkdf2",
   "crypto",
   "dns",
   "domain",
