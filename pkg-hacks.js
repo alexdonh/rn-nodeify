@@ -514,21 +514,21 @@ var hackers = [
       return contents.replace(/_crypto\s+=\s+\(\s+g\.crypto\s+\|\|\s+g.msCrypto\s+\|\|\s+require\('crypto'\)\s+\)/, hack)
     }
   },
-  {
-    name: 'version',
-    regex: [/pbkdf2/],
-    hack: function (file, contents) {
-      if (isInReactNative(file)) return
+  // {
+  //   name: 'version',
+  //   regex: [/pbkdf2/],
+  //   hack: function (file, contents) {
+  //     if (isInReactNative(file)) return
 
-      if (/\/react\-devtools\//.test(file)) return
+  //     if (/\/react\-devtools\//.test(file)) return
 
-      var fixed = contents
-        .replace(/global\.process\.version/g, '"' + process.version + '"')
-        .replace(/process\.version/g, '"' + process.version + '"')
+  //     var fixed = contents
+  //       .replace(/global\.process\.version/g, '"' + process.version + '"')
+  //       .replace(/process\.version/g, '"' + process.version + '"')
 
-      return contents === fixed ? null : fixed
-    }
-  },
+  //     return contents === fixed ? null : fixed
+  //   }
+  // },
 ]
 
 function rewireMain (pkg) {
